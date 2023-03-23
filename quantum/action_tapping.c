@@ -6,6 +6,7 @@
 #include "action_tapping.h"
 #include "keycode.h"
 #include "timer.h"
+#include "wait.h"
 
 #ifndef NO_ACTION_TAPPING
 
@@ -99,6 +100,7 @@ void action_tapping_process(keyrecord_t record) {
         ac_dprintf("---- action_exec: process waiting_buffer -----\n");
     }
     for (; waiting_buffer_tail != waiting_buffer_head; waiting_buffer_tail = (waiting_buffer_tail + 1) % WAITING_BUFFER_SIZE) {
+        wait_ms(10);
         if (process_tapping(&waiting_buffer[waiting_buffer_tail])) {
             ac_dprintf("processed: waiting_buffer[%u] =", waiting_buffer_tail);
             debug_record(waiting_buffer[waiting_buffer_tail]);
