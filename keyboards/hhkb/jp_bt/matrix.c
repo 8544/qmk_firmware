@@ -1,6 +1,6 @@
 /*
 Copyright 2011 Jun Wako <wakojun@gmail.com>
-Copyright 2020-2022 8544 <emacs@ymail.ne.jp> 
+Copyright 2020-2024 8544 <emacs@ymail.ne.jp>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -59,7 +59,7 @@ void matrix_init(void)
     matrix = _matrix0;
     matrix_prev = _matrix1;
 
-    matrix_init_quantum();
+    matrix_init_kb();
 }
 
 __attribute__((weak)) void matrix_init_kb(void) { matrix_init_user(); }
@@ -83,7 +83,7 @@ uint8_t matrix_scan(void)
     for (uint8_t row = 0; row < MATRIX_ROWS; row++) {
         for (uint8_t col = 0; col < MATRIX_COLS; col++) {
             wait_us_arm(5);
-            
+
             ROW_SELECT(row);
             wait_us_arm(12);
 
@@ -121,7 +121,7 @@ uint8_t matrix_scan(void)
     }
     KEY_POWER_OFF();
 
-    matrix_scan_quantum();
+    matrix_scan_kb();
 
     wait_ms(12);
     return 1;

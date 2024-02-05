@@ -2,7 +2,7 @@
 
 #include "quantum.h"
 
-#define LAYOUT_JP(                                                                              \
+#define LAYOUT_jp(                                                                              \
     K14, K16, K17, K15, K13, K10, K11, K12, K1E, K1C, K1A, K19, K18, K1D, K3D,                  \
     K24, K26, K27, K25, K23, K20, K21, K22, K2E, K2C, K2A, K29, K28,                            \
     K04, K06, K07, K05, K03, K00, K01, K02, K0E, K0C, K0A, K09, K08, K3F,                       \

@@ -1,6 +1,6 @@
 /*
 Copyright 2012 Jun Wako <wakojun@gmail.com>
-Copyright 2020-2022 8544 <emacs@ymail.ne.jp> 
+Copyright 2020-2024 8544 <emacs@ymail.ne.jp>
 -
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -17,11 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
-
-#include "config_common.h"
-
-/* USB Device descriptor parameter */
-#define DESCRIPTION     q.m.k keyboard firmware for HHKB-BT
 
 /* key matrix size */
 #define MATRIX_ROWS 16
@@ -61,7 +56,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define AUDIO_CLICKY_FREQ_RANDOMNESS 0.3f
 
 #define MUSIC_MAP
-
-// VIA
-#define BOOTMAGIC_LITE_ROW 4
-#define BOOTMAGIC_LITE_COL 1
