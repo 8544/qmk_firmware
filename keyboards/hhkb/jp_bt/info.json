@@ -18,7 +18,7 @@
         }
     },
     "tapping": {
-        "force_hold": false,
+        "force_hold": true,
         "term": 200
     },
     "usb": {
